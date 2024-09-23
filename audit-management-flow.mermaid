@@ -1,0 +1,83 @@
+graph TD
+    A[Start] --> B[Planning & Administration]
+    B --> C[Audit Planning & Scheduling]
+    C --> D[Audit Execution]
+    D --> E[Audit Reporting]
+    E --> F[Follow-up & NC Closure]
+    F --> G[Dashboard & Analytics]
+    G --> H[End]
+
+    subgraph "1. Planning & Administration"
+    B --> B1[Create Business Units]
+    B --> B2[Provision Standards]
+    B --> B3[Create Users/Hierarchy]
+    B --> B4[Set up 50+ Users]
+    end
+
+    subgraph "2. Audit Planning & Scheduling"
+    C --> C1[Auto Planning Suggestions]
+    C --> C2[Monthly Planning]
+    C --> C3[Auto Review/Approval]
+    C --> C4[Clause Coverage Check]
+    C --> C5[Auditor Skill Matrix]
+    C --> C6[Handle Plan Changes]
+    end
+
+    subgraph "3. Audit Execution"
+    D --> D1[Auto Reminders]
+    D --> D2[Sample Size Selection]
+    D --> D3[Create Audit Checklists]
+    D --> D4[Capture Evidence]
+    D --> D5[Auto Release Key Issues]
+    end
+
+    subgraph "4. Audit Reporting"
+    E --> E1[Record Evidence]
+    E --> E2[Auto Select Standards for NC]
+    E --> E3[Review Reports]
+    E --> E4[Auto Release Report]
+    end
+
+    subgraph "5. Follow-up & NC Closure"
+    F --> F1[Auto Schedule Follow-up]
+    F --> F2[Upload Corrective Actions]
+    F --> F3[Verify Evidence]
+    F --> F4[Auto Escalate Issues]
+    F --> F5[Release CAI to Units]
+    end
+
+    subgraph "6. Dashboard & Analytics"
+    G --> G1[Live Dashboards]
+    G --> G2[Role-based Views]
+    G --> G3[Risk Meter]
+    G --> G4[Custom Reports]
+    G --> G5[Auto Notifications]
+    end
+
+    %% Connections between subgraphs
+    B1 & B2 & B3 & B4 --> C
+    C1 & C2 & C3 & C4 & C5 & C6 --> D
+    D1 & D2 & D3 & D4 & D5 --> E
+    E1 & E2 & E3 & E4 --> F
+    F1 & F2 & F3 & F4 & F5 --> G
+
+    %% Data flow to Dashboard
+    C -.-> G
+    D -.-> G
+    E -.-> G
+    F -.-> G
+
+    %% Additional features
+    B5[Export/Import Options]
+    C7[Auto Popups/Reminders]
+    D6[Clause Coverage Check]
+    E5[Export/Import Options]
+    F6[Online Evidence Submission]
+    G6[Email & Mobile Alerts]
+
+    B --> B5
+    C --> C7
+    D --> D6
+    E --> E5
+    F --> F6
+    G --> G6
